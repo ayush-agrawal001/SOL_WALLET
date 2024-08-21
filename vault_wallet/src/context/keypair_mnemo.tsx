@@ -20,7 +20,7 @@ interface MnemoProviderReturn {
     EUKP  : Keypair | undefined
     isEseed : React.Dispatch<React.SetStateAction<boolean>>
     Eseed : boolean
-    passESeed
+    passESeed : (arg : string) => genMnemot
 }
 
 const mnemoContext = createContext<MnemoProviderReturn | null>(null);

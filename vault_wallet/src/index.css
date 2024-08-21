@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=Jersey+10&family=New+Amsterdam&display=swap');
+
+
+body{
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.Home{
+    /* background-color: rgb(31, 59, 59); */
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding:0px;
+}
+
+.HomeNavBar h1{
+    /* background-color: blueviolet; */
+    color: rgb(80, 160, 159);
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 200px;
+}
+.typingAnime{
+    /* background-color: blueviolet; */
+    color: rgb(105, 199, 198);
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    margin-top: -100px;
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 50px;
+}
+
+.Home button{
+    background-color: rgb(31, 59, 59);
+    border: solid 2px rgb(31, 59, 59);
+    color: white;
+    height: 5rem;
+    width : 30rem;
+    cursor: pointer;
+    border-radius: 2%;
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 50px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.Home button:hover {
+    background-color: rgb(35, 93, 92);
+    transform: scale(1.05);
+}
+
+.option{
+        /* background-color: rgb(255, 255, 255); */
+        color: aliceblue;
+        position: absolute;
+        /* height: 200px; */
+        display: grid;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 50px;
+        
+}
+
+.option button{
+    background-color: rgb(31, 59, 59);
+    color: aliceblue;
+    border: solid 2px rgb(31, 59, 59);
+    margin: 10px;
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.option button:hover {
+    background-color: rgb(35, 93, 92);
+    transform: scale(1.05);
+}
+
+.eSeed {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding:0px;
+  }
+  
+.eSeed input {
+width: 300px;
+padding: 10px;
+font-size: 16px;
+border: none;
+border-bottom: 2px solid #ccc;
+outline: none;
+transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.eSeed input:focus {
+border-color: #f8f8f8;
+box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.3);
+}
+
+.eSeed input:focus ~ .underline {
+    width: 100%;
+}
+
+.underline {
+position: relative;
+top: -2px;
+height: 2px;
+width: 0;
+background-color: #ffffff;
+transition: width 0.4s ease-in-out;
+}
+
+.eSeed button {
+margin-top: 20px;
+padding: 10px 20px;
+font-size: 16px;
+color: white;
+background-color: rgb(35, 93, 92);
+border: none;
+border-radius: 4px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.eSeed button:hover {
+background-color: rgb(31, 59, 59);
+}
+
+.error {
+color: red;
+margin-top: 10px;
+}
+
+.wallet{
+    color: #ccc;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 800px;
+    height: 800px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    border: solid 2px whitesmoke;
+}
+
+.wallet h3{
+    background-color: rgb(192, 207, 207);
+    color: rgb(22, 43, 41); 
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 30px;
+}
+
+.wallet button{
+    background-color: rgb(31, 59, 59);
+    color: aliceblue;
+    border: solid 2px rgb(31, 59, 59);
+    margin: 10px;
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.wallet button:hover {
+    background-color: rgb(35, 93, 92);
+    transform: scale(1.05);
+}
+
+.wallet input {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #000000;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.note{
+    background-color: #000000;
+    border: solid 1px;
+    padding: 10px;
+    border-radius: 5%;
+    color: rgb(255, 255, 255); 
+    margin-bottom: 60px;
+}
+
+.wallet link{
+    color: #f8f8f8;
+    cursor: pointer;
+}
+
+.loader{
+    position: relative;
+    margin-top: 20%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+}
+
+.warning{
+    background-color: rgb(31, 59, 59);
+    position: absolute;
+    display: grid;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding:0px;
+    color: #ccc;
+}
+
+.warning h1{
+    display: flex;
+    justify-content: center;
+    color: red;
+}
+
+.warning h3{
+    flex-wrap: wrap;
+}
+
+.warning button{
+    background-color: rgb(31, 59, 59);
+    color: aliceblue;
+    border: solid 2px rgb(31, 59, 59);
+    margin: 10px;
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.warning button:hover {
+    background-color: rgb(35, 93, 92);
+    transform: scale(1.05);
+}
+
+.mnemonic{
+    /* background-color: rgb(255, 255, 255); */
+    position: absolute;
+    display: grid;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 50px;
+    color: white;
+}
+
+.mnemonic button{
+    background-color: rgb(31, 59, 59);
+    color: aliceblue;
+    border: solid 2px rgb(31, 59, 59);
+    margin: 10px;
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.mnemonic button:hover {
+    background-color: rgb(35, 93, 92);
+    transform: scale(1.05);
+}
+
+.mnemonic ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.mnemonic li {
+    display: inline-block;
+    background-color: black;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.mnemonic li:hover {
+    background-color: rgb(35, 93, 92);
+    transform: scale(1.5);
+}
