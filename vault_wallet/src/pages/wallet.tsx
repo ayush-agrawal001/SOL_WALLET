@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import { useMnemo } from "../context/keypair_mnemo";
 import { clusterApiUrl, Connection, LAMPORTS_PER_SOL, PublicKey,sendAndConfirmTransaction, SystemProgram, Transaction } from "@solana/web3.js";
 import HashLoader from "react-spinners/HashLoader";
+import {motion as m} from "framer-motion"
 
 const SOLWallet: React.FC = () => {
     const [balance, setBalance] = useState<number>()
@@ -86,6 +87,13 @@ const SOLWallet: React.FC = () => {
     },[conn, sendAndConfirmTransaction, SystemProgram])
 
     return (
+        <m.main
+            initial ={{x : "100%"}}
+            animate ={{x : "0%"}}
+            transition={{duration: 0.3, ease : "easeOut"}}
+            exit={{opacity : 1}}
+            className="eseedpage"
+        >
         <div >
             {loading ?
                 <HashLoader className="loader"
@@ -112,6 +120,7 @@ const SOLWallet: React.FC = () => {
             }
 
         </div>
+        </m.main>
     )
 }
 

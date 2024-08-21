@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useMnemo } from "../context/keypair_mnemo";
 import { useNavigate } from "react-router-dom";
+import {motion as m} from "framer-motion"
 
 const UserMnemonicShow: React.FC = () => {
     const context = useMnemo()
@@ -15,6 +16,13 @@ const UserMnemonicShow: React.FC = () => {
         }
     }, [mnemonic]);
     return(
+        <m.main
+            initial ={{x : "100%"}}
+            animate ={{x : "0%"}}
+            transition={{duration: 0.3, ease : "easeOut"}}
+            exit={{opacity : 1}}
+            className="eseedpage"
+        >
         <div className="mnemonic">
             <button onClick={() => {setMnemonic(context?.getValue.mnemonic)}}>
                 Show Mnemonic
@@ -32,6 +40,7 @@ const UserMnemonicShow: React.FC = () => {
                 Go to wallet
             </button>
         </div>
+        </m.main>
     )
 }
 

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useMnemo } from "../context/keypair_mnemo";
+import {motion as m} from "framer-motion"
 
 const ExistSeed: React.FC = () => {
     const navigate = useNavigate()
@@ -27,8 +28,19 @@ const ExistSeed: React.FC = () => {
     }
 
     return (
+        <m.main
+        initial ={{x : "100%"}}
+        animate ={{x : "0%"}}
+        transition={{duration: 0.3, ease : "easeOut"}}
+        exit={{opacity : 1}}
+        className="eseedpage"
+        >
         <div className="eSeed">
-            <input type="text" placeholder="Enter Private Key" onChange={(e) => {setPvtKey(e.target.value)}}/>
+            <m.input 
+                initial ={{x : "100%"}}
+                animate ={{x : "0%"}}
+                transition={{duration: 0.5, ease : "easeOut"}}
+                type="text" placeholder="Enter Private Key" onChange={(e) => {setPvtKey(e.target.value)}}/>
             <div className="underline"></div> 
             <button onClick={() => {handleSubmit()}}
                 >
@@ -36,6 +48,7 @@ const ExistSeed: React.FC = () => {
             </button>
             <p className="error">{error}</p>
         </div>
+        </m.main>
     )
 }
 
