@@ -9,12 +9,11 @@ const UserMnemonicShow: React.FC = () => {
     return(
         <div>
             UserMnemonicShow
-            {context?.num}
-            <button onClick={() => {setMnemonic(context?.getValue().mnemonic)}}>
+            <button onClick={() => {setMnemonic(context?.getValue.mnemonic)}}>
                 Show Mnemonic
             </button>
             {mnemonic}
-            <button onClick={() => {setPubKey(context?.getValue().userPubKey)}}> 
+            <button onClick={() => {setPubKey(context?.getValue.userPubKey)}}> 
                 Show PUBLIC KEY
             </button>
             {pubKey}
